@@ -17,10 +17,6 @@ div {
     display: block;
     unicode-bidi: isolate;
 }
-
-#content-container .row {
-    margin-bottom: 2em;
-}
 .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -52,7 +48,7 @@ div {
 }
   
   @media (min-width: 992px) {
-    .col-md-6 {
+    .col-md-6, .col-md-8 {
       width: 50%;
       float: left;
     }
@@ -64,8 +60,22 @@ div {
       float: left;
     }
 }
+
+@media (min-width: 992px) {
+    .col-md-8 {
+    width: 66.66666666666666%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-2 {
+      width: 16.666666666666664%; 
+      float: left;
+    }
+}
  
-   .col-sm-6, .col-md-6, .col-lg-2 {
+ 
+   .col-sm-6, .col-md-6, .col-lg-2, .col-md-8, .col-xs-8, .col-sm-6, .col-xs-3, .col-md-2 {
     position: relative;
     min-height: 1px;
     padding-right: 12px;
@@ -75,6 +85,10 @@ div {
 a {
     color: #428bca;
     text-decoration: none;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
 }
 
 #narrow-results .btn-block {
@@ -98,11 +112,7 @@ a {
     border-radius: 4px;
     user-select: none;
 }
-.btn-custom {
-    color: #fff;
-    background-color: #ffc107;
-    
-}
+
 .btn-block {
     display: block;
     width: 100%;
@@ -114,9 +124,7 @@ button, input, select[multiple], select, textarea {
     font-family: inherit;
     margin: 0;
 }
-/* button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
-} */
+
 button, select {
     text-transform: none;
 }
@@ -167,13 +175,19 @@ button {
     border-radius: 10px;
 }
 
+#narrow-results .widget-active {
+    border-bottom: #124c70 5px solid !important;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #ffc107;
+    
+}
+
 .btn-success {
     color: #fff;
     background-color: #5cb85c;
-}
-
-#narrow-results .widget-active {
-    border-bottom: #124c70 5px solid !important;
 }
 
 .btn-info {
@@ -196,13 +210,111 @@ button {
     background-color: #d9534f;
 }
 
-.card-container {
-    max-width: 1500px; 
-    margin: 0 auto; 
-    background: #ffffff; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    margin-top: 120px; 
-  }
-  
+
+  .dashboard {
+    max-width: 2000px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: -50px;
+/* 
+    background: #FFF;
+    width: auto;
+    z-index: 18;
+    margin-left: 100px;
+    position: relative;
+    left: auto;
+    top: auto; */
+}
+
+.dashboard-header {
+    position: relative;
+    top: 75px;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 4em;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #CCC;
+    border-top-left-radius: 4px;
+}
+
+.breadcrumb {
+    position: relative;
+    left: -20px;
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 44px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+}
+
+li {
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.btn-sm, .btn-xs {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.btn {
+display: inline-block;
+margin-bottom: 0;
+font-weight: normal;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+user-select: none;
+}
+
+.notif-badge {
+    position: absolute !important;
+    background: red;
+}
+
+/* #content-container {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-right: 10px;
+
+} */
+
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+
+.breadcrumb-navigation > li {
+    display: inline;
+}
+
+#content-container {
+    position: relative;
+    top: 40px;
+}

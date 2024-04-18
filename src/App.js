@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css';
-import Test from './Test';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './Dashboard';
+import TableGrid from './TableGrid/TableGrid';
+import Filter from './FILTER/Filter';
+
 
 function App() {
   return (
     <>
-    <Test />
-    </>
+    <Dashboard />
+    <TableGrid />
+    <Filter />
+    </> 
   );
 }
 
