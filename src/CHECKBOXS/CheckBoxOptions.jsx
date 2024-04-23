@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../FILTER/Filter.css';
 // Define the options for your checkboxes
 const checkboxOptions = [
   { value: "34", label: "Appraisals" },

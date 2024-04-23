@@ -9,9 +9,9 @@
 
 }
 
-#content-container .Table {
+/* #content-container .Table {
     margin-bottom: 2em;
-}
+} */
 
 .tablesorter-bootstrap {
     width: 100%;
@@ -219,3 +219,21 @@ option {
     padding: 0px 2px 1px;
     white-space: nowrap;
 }
+
+@media (min-width: 992px) {
+    .col-md-12 {
+        width: 100%;
+    }
+    }
+    
+    .col-md-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    div {
+        display: block;
+        unicode-bidi: isolate;
+    }

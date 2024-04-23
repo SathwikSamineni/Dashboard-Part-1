@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Filter.css'; 
+import { Collapse } from 'react-bootstrap';
+
+import SubFilters from './SubFilters';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure to include Bootstrap CSS
 
 const Filter = () => {
   // Define state variables for form inputs and visibility
@@ -8,29 +12,20 @@ const Filter = () => {
   const [projectType, setProjectType] = useState('All Project Type');
   const [searchForm, setSearchForm] = useState({
     team: '',
+
     projectType: '',
-  //   // Add more fields if needed
   });
 
-  // // Event handler for form submissions
-  // const handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(searchForm); // Log the form data or handle form submission here
-  // };
-
-  // // Event handler for input changes
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setSearchForm({
-  //     ...searchForm,
-  //     [name]: value,
-  //   });
-  // };
-
-  // Function to toggle form visibility
+  
   const toggleFormVisibility = () => {
     setFormVisible(!formVisible);
   };
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    // Toggle handler function
+    const handleToggleDropdown = () => {
+        setIsDropdownOpen((prevState) => !prevState);
+    };
 
   return (
     <div className="panel panel-info" id="dashboardFilterForm" style={{ display : 'block' }}>
@@ -71,16 +66,31 @@ const Filter = () => {
                 <div className="col-md-7">
                   <div className="dev-drop">
                     <ul className="nav">
-                      <div className="dropdown">
+                      {/* <div className="dropdown">
                         <li className="button-dropdown">
                           <a href="javascript:void(0)" className="dropdown-toggle" id="select-rfp">
                             {projectType} <span>▼</span>
                           </a>
-                          <ul className="dropdown-menu" role="menu">
-                            {/* Add dropdown items here */}
+                          <ul className="dropdown-menu" role="menu" style={{display : 'block'}}>
+                            <SubFilters />
                           </ul>
                         </li>
-                      </div>
+                      </div> */}
+
+                      <div className="dropdown">
+                      <li className="button-dropdown">
+                      <a href="javascript:void(0)" className="dropdown-toggle" id="select-rfp" onClick={handleToggleDropdown}>
+                        {projectType} <span>▼</span>
+                      </a>
+    
+                    <Collapse in={isDropdownOpen}>
+                    <ul className="dropdown-menu" role="menu">
+                    <SubFilters />
+                    </ul>
+                    </Collapse>
+                    </li>
+                    </div>
+
                     </ul>
                     <span className="error-display" style={{ color: 'red' }}></span>
                   </div>

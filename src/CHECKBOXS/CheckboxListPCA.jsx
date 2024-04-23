@@ -1,4 +1,5 @@
 import React from 'react';
+import '../FILTER/Filter.css';
 
 // Define the PCA-related options
 const pcaCheckboxOptions = [

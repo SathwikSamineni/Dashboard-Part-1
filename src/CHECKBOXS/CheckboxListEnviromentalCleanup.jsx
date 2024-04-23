@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../FILTER/Filter.css';
 // Define the Environmental Cleanup options
 const environmentalCleanupOptions = [
   { value: "16", label: "Site Remediation" },

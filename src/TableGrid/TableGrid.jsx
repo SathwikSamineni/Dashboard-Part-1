@@ -47,6 +47,7 @@ const rows = [
 
 
   return (
+    <div className='col-md-12'>
     <div className="portlet">
       <table className="ui-table-reflow tablesorter table table-bordered hasFilters tablesorter-bootstrap" style = {{fontsize: "13px"}} role="grid">
       <colgroup></colgroup>
@@ -54,6 +55,7 @@ const rows = [
         <TableBody rows={rows} />
       </table>
       <TablePager data={data} setData={setData} />
+      </div>
     </div>
   );
 };

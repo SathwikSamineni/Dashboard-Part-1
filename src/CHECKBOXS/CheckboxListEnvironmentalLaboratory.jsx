@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../FILTER/Filter.css';
 // Define the Environmental - Laboratory options
 const environmentalLaboratoryOptions = [
   { value: "20", label: "Laboratory Analysis Services" },
