@@ -150,3 +150,28 @@ input[type="submit" i] {
     padding-inline: 6px;
     
 }
+
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1001;
+    width: 45px;
+    padding-top: 12px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    transition: background 0.25s linear;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 5px;
+}

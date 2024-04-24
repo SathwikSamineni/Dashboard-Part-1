@@ -5,6 +5,7 @@ import { faCalendar, faDashboard, faCaretDown } from '@fortawesome/free-solid-sv
 import AccountingTable from "./AccountingTable";
 import './Accounting.css';
 import { Link } from "react-router-dom";
+import Calendar from "./Calendar";
 
 const AccountingPage = () => {
     return (
