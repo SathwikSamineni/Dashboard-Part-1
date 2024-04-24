@@ -5,6 +5,7 @@ import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 import TablePager from "./TablePager";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './theme.bootstrap.css';
 // import FilterRow from './TableFilterForm';
 
 const TableGrid = () => {
@@ -47,7 +48,11 @@ const rows = [
 
 
   return (
-    <div className='col-md-12'>
+    <div id='content'>
+    <div id="content-container">
+    <div className="content">
+    <div className="col-md-12">
+    <div className='col-md-12'></div>
     <div className="portlet">
       <table className="ui-table-reflow tablesorter table table-bordered hasFilters tablesorter-bootstrap" style = {{fontsize: "13px"}} role="grid">
       <colgroup></colgroup>
@@ -56,6 +61,9 @@ const rows = [
       </table>
       <TablePager data={data} setData={setData} />
       </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 };

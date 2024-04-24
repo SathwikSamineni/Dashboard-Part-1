@@ -4,8 +4,6 @@ import AccountingTableBody from './AccountingTableBody';
 import './AccountingTable.css';
 import AccountingPaginate from './AccountingPaginate';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSort } from '@fortawesome/free-solid-svg-icons';
 
 const AccountingTable = () => {
     const columns = [
@@ -47,7 +45,7 @@ const AccountingTable = () => {
                         <div className="col-sm-12">
                             <table className="table table-bordered dataTable no-footer dtr-inline" id="account-overview-table" width="100%" style={{ fontSize: '13px', width: '100%' }} role="grid" aria-describedby="account-overview-table_info">
                             <AccountingTableHeader columns={columns} />
-                            {/* <FontAwesomeIcon icon={faSort} className="bootstrap-icon-unsorted" /> */}
+                           
                                 <AccountingTableBody />
                             </table>
                         </div>

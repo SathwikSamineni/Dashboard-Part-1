@@ -7,6 +7,7 @@ import AccountingTest from './Accounting Overview/AccountingTest';
 import AccountingTable from './Accounting Overview/AccountingTable';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AccountingPage from './Accounting Overview/AccountingPage';
+import LossRatio from './Preferred Vendors/LossRatio';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/AccountingTable" element={<AccountingTable />} />
           <Route path="/Accounting" element={<AccountingPage />} />
           <Route path="/Test" element={<AccountingTest />} />
+          <Route path="/Win" element={<LossRatio />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -8,7 +8,7 @@ const Calendar = () => {
     return (
         <div>
             <a id="back-to-top" href="#top" style={{ display: 'none' }}><FontAwesomeIcon icon={faCaretDown} /></a>
-            <div className="daterangepicker ltr show-ranges opensright" style={{ display: 'block', top: '218.797px', left: '644.422px', right: 'auto' }}>
+            <div className="daterangepicker ltr show-ranges opensright" style={{ display: 'block' , right: 'auto' }}>
                 <div className="ranges">
                     <ul>
                         <li data-range-key="Today" className="active">Today</li>
