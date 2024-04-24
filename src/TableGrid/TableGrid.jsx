@@ -5,7 +5,7 @@ import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 import TablePager from "./TablePager";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './theme.bootstrap.css';
+
 // import FilterRow from './TableFilterForm';
 
 const TableGrid = () => {

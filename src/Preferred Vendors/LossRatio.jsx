@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDashboard } from '@fortawesome/free-solid-svg-icons';
+import { faDashboard, faSort } from '@fortawesome/free-solid-svg-icons';
 import './Loss.css';
 import TablePager from '../TableGrid/TablePager';
 import { Link } from "react-router-dom";
