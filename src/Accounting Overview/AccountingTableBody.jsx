@@ -1,5 +1,6 @@
 import React from 'react';
 import './AccountingTable.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AccountingTableBody = () => {
     return (

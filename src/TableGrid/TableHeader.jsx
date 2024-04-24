@@ -128,7 +128,7 @@ const TableHeader = () => {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span>{header.text}</span>
             <div style={{ paddingLeft: '30px' }}>
-            <FontAwesomeIcon icon={faSort} className="bootstrap-icon-unsorted" />
+            <i className="tablesorter-icon bootstrap-icon-unsorted"></i>
             </div>
             </div>
             </div>
