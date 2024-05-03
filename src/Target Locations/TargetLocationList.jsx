@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TablePager from '../TableGrid/TablePager';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Target.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashboard } from '@fortawesome/free-solid-svg-icons'; 
+import { Link } from "react-router-dom";
+
+import AI from './AI';
 
 
 const TargetLocationList = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Function to toggle modal visibility
+    const toggleModal = () => {
+      setIsModalOpen(!isModalOpen);
+    };
 
     return (
         <div id="content">
@@ -14,14 +23,17 @@ const TargetLocationList = () => {
                 <div className="row">
                     <div className="col-md-7 col-sm-6 col-xs-12">
                         <ol className="breadcrumb" style={{ marginLeft: '30px'}}>
-                            <li><a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_progress"><FontAwesomeIcon icon={faDashboard} /> Dashboard</a></li>
+                            <li><Link to="https://stagingapp.blue222.com/fadmin/dashboard/fain_progress"><FontAwesomeIcon icon={faDashboard} /> Dashboard</Link></li>
                             <li>Target Locations List</li>
                         </ol>
                     </div>
                     <div className="col-md-5 col-sm-6 col-xs-12">
-                        <a href="https://stagingapp.blue222.com/target/locations/new" className="btn btn-success btn-md" style={{ margin: '7px' }}>Add New Location</a>
-                        <a href="#" data-toggle="modal" data-target="#applyLinkURLBox" className="btn btn-warning btn-md">Apply Link</a>
-                        <a href="https://stagingapp.blue222.com/short/0k0jg" target="_blank" style={{ float: 'right', marginLeft: '15px' }}><button className="btn btn-info" id="new-without-image">Map View</button></a>
+                        <Link to="/pntl" className="btn btn-success btn-md" style={{ margin: '7px' }}>Add New Location</Link>
+                        {/* <Link to="/AI" data-toggle="modal" data-target="#applyLinkURLBox" className="btn btn-warning btn-md">Apply Link</Link> */}
+                        <Link to="/AI" onClick={toggleModal} className="btn btn-warning btn-md">Apply Link</Link>
+                        {isModalOpen && <AI toggleModal={toggleModal} />}
+                        {/* <AI /> */}
+                        <Link to="https://stagingapp.blue222.com/short/0k0jg" target="_blank" style={{ marginLeft: '20px'}}><button className="btn btn-info" id="new-without-image">Map View</button></Link>
                     </div>
                 </div>
             </div>
@@ -46,7 +58,7 @@ const TargetLocationList = () => {
                                         </div>
                                         <div className="modal-body">
                                             <form method="POST" action="https://stagingapp.blue222.com/target/locations/applylink/save" acceptCharset="UTF-8" id="applylinkform" encType="multipart/form-data">
-                                                <input name="_token" type="hidden" value="wQzfWWAtPlvvowKg3cztXE1dLCcMtQTwZbgmMv5x" />
+                                                
                                                 <div className="panel-body" id="address">
                                                     <div className="row">
                                                         <div className="col-md-12">
@@ -61,7 +73,7 @@ const TargetLocationList = () => {
                                                     <div className="form-group col-lg-12">
                                                         <input id="action3" className="btn btn-info" value="Save" name="action" form="applylinkform" style={{ marginTop: '1%' }} type="submit" />
                                                         &nbsp; &nbsp;
-                                                        <a href="https://stagingapp.blue222.com/target/locations/list"><button className="btn btn-danger widget-active" style={{ marginTop: '1%' }} type="button">Cancel</button></a>
+                                                        <Link to="https://stagingapp.blue222.com/target/locations/list"><button className="btn btn-danger widget-active" style={{ marginTop: '1%' }} type="button">Cancel</button></Link>
                                                     </div>
                                                 </div>
                                             </form>
@@ -91,6 +103,7 @@ const TargetLocationList = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }

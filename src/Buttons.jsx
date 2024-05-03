@@ -14,11 +14,7 @@ const buttonData = [
 ];
 
 const Buttons = () => {
-  const [activeButton, setActiveButton] = useState(''); 
-
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-  }, []);
+  const [activeButton, setActiveButton] = useState('All');
 
 
   return (

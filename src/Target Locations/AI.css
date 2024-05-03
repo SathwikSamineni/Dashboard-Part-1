@@ -1,0 +1,49 @@
+.modal {
+    overflow-y: auto;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+.modal-body {
+    position: relative;
+    padding: 20px;
+}
+
+.show {
+    display: block !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+.modal-dialog {
+    right: auto;
+    left: 50%;
+    width: 600px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+}
+
+.modal-dialog {
+    z-index: 1050;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-info {
+    color: #ffffff;
+    background-color: #3498db;
+    border-color: #258cd1;
+}

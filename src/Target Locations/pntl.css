@@ -1,0 +1,64 @@
+#content {
+    background: #FFF;
+    width: auto;
+    z-index: 18;
+    margin-left: 200px;
+    position: relative;
+    left: auto;
+    top: auto;
+}
+
+#content-container {
+    position: relative;
+    top: -50px;
+}
+
+#content-header {
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 4em;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #CCC;
+    border-top-left-radius: 4px;
+}
+.help-tip {
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    line-height: 15px;
+    cursor: default;
+}
+
+.help-tip:before {
+    content: '?';
+    font-weight: bold;
+    color: #fff;
+}
+
+.control-label:after {
+    Font-size: 24px;
+    content: "*";
+    color: red;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#content-container .row {
+    margin-bottom: 2em;
+}
+
+label {
+    font-weight: 600;
+}
+
+
