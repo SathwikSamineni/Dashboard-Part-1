@@ -18,7 +18,7 @@ const AccountingTableHeader = ({ columns }) => {
                         aria-controls="account-overview-table"
                         rowSpan="1"
                         colSpan="1"
-                        style={{ width: label.width || 'auto' }}
+                        style={{ FontWeight: 'bold', width: label.width || 'auto' }}
                         aria-label={`${label.name}: activate to sort column ${label.sorting}`}
                     >
                         {label.name}

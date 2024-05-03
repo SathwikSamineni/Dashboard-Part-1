@@ -1,4 +1,4 @@
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 .col-md-12 {
     width: 100%;
 }
@@ -18,7 +18,7 @@
 div {
     display: block;
     unicode-bidi: isolate;
-}
+} */
 
 #content-container .portlet {
     margin-bottom: 2em;
@@ -39,7 +39,7 @@ div {
     margin-left: -15px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 .col-sm-6 {
     width: 50%;
     float: left;
@@ -218,7 +218,7 @@ tr {
 
 .table caption+thead tr:first-child th, .table colgroup+thead tr:first-child th, .table thead:first-child tr:first-child th, .table caption+thead tr:first-child td, .table colgroup+thead tr:first-child td, .table thead:first-child tr:first-child td {
     border-top: 0;
-}
+} */
 
 /* table.dataTable thead .sorting_asc {
     background: url(../js/plugins/datatables/img/sort_asc.png) no-repeat center right;

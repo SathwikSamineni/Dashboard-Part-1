@@ -5,6 +5,7 @@ import AccountingTable from "../Accounting Overview/AccountingTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import PortfolioTable from "./ManagePortfolioTable";
 
 const ManagePortfolios = () => {
     return (
@@ -20,7 +21,7 @@ const ManagePortfolios = () => {
                         <div className="page-header">
                             <h3 align="left">Manage Portfolios </h3>
                         </div>
-                        <AccountingTable />
+                        <PortfolioTable />                    
                     </div>
                 </div>
             </div>
