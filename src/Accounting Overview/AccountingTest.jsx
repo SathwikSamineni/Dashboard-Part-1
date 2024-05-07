@@ -146,7 +146,6 @@ const FilterForm = () => {
 const ExportForm = () => {
     return (
         <form method="POST" action="https://stagingapp.blue222.com/accounting/overview/exportExcel" accept-charset="UTF-8" id="form_export_data">
-            <input name="_token" type="hidden" value="DK5F7vJVx4lMG0qNafz0Aau9mlp9LtFSSmurnWVE" />
             <div className="col-md-2">
                 <input className="btn btn-success" id="btn-export-to-excel" type="submit" value="Export to Excel" />
             </div>

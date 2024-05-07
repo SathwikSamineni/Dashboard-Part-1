@@ -1,9 +1,11 @@
 import React from 'react';
-import './Dash.css';
+// import './Dash.css';
+import '../Part.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TableGrid from '../TableGrid/TableGrid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashboard } from '@fortawesome/free-solid-svg-icons';
+import TablePager from '../TableGrid/TablePager';
 
 const Dash = () => {
     return (
@@ -78,7 +80,94 @@ const Dash = () => {
                 </div>
             </div>
 
-           <TableGrid />
+           {/* <TableGrid /> */}
+           <div className="portlet">
+      <table className="ui-table-reflow tablesorter table table-bordered hasFilters tablesorter-bootstrap" style={{ fontSize: '13px' }} role="grid">
+        <colgroup></colgroup>
+        <thead>
+          <tr role="row" className="tablesorter-headerRow">
+            <th data-placeholder="Follow" data-column="0" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Follow : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Follow <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by Name" data-column="1" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Name : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Name <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th style={{ width: '14%', userSelect: 'none' }} data-placeholder="Filter by Due Date" data-column="2" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Due Date : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Due Date <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by Status" data-column="3" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Status : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Status <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by Type" data-column="4" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Type : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Type <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by City" data-column="5" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="City : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">City <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by State/Province" data-column="6" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="State/Province : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">State/Province <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by Address" data-column="7" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Address : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Address <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by Portfolio" data-column="8" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Portfolio : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Portfolio <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th style={{ width: '14%', userSelect: 'none' }} data-placeholder="Filter by Vendor" data-column="9" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Vendor(s) : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Vendor(s) <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th style={{ width: '14%', userSelect: 'none' }} data-placeholder="Filter by Contractor/Writer" data-column="10" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Contractor/Writers : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Contractor/Writers <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+            <th data-placeholder="Filter by Team" data-column="11" className="tablesorter-header tablesorter-headerUnSorted bootstrap-header" tabIndex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style={{ userSelect: 'none' }} aria-sort="none" aria-label="Team : No sort applied, activate to apply an ascending sort">
+              <div className="tablesorter-wrapper" style={{ position: 'relative', height: '100%', width: '100%' }}>
+                <div className="tablesorter-header-inner">Team <i className="tablesorter-icon bootstrap-icon-unsorted"></i></div>
+              </div>
+            </th>
+          </tr>
+          <tr role="row" className="tablesorter-filter-row">
+            <td><input type="search" placeholder="Follow" className="tablesorter-filter" data-column="0" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Name" className="tablesorter-filter" data-column="1" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Due Date" className="tablesorter-filter" data-column="2" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Status" className="tablesorter-filter" data-column="3" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Type" className="tablesorter-filter" data-column="4" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by City" className="tablesorter-filter" data-column="5" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by State/Province" className="tablesorter-filter" data-column="6" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Address" className="tablesorter-filter" data-column="7" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Portfolio" className="tablesorter-filter" data-column="8" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Vendor" className="tablesorter-filter" data-column="9" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Contractor/Writer" className="tablesorter-filter" data-column="10" data-lastsearchtime="1714744816236" /></td>
+            <td><input type="search" placeholder="Filter by Team" className="tablesorter-filter" data-column="11" data-lastsearchtime="1714744816236" /></td>
+          </tr>
+        </thead>
+        <tbody aria-live="polite" aria-relevant="all">
+          <tr className="odd" style={{ display: 'table-row' }}></tr>
+        </tbody>
+      </table>
+      <TablePager />
+    </div>
         </div>
         </div>
             </div>

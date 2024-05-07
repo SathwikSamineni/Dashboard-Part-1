@@ -24,3 +24,7 @@ body {
     border-top-left-radius: 4px;
 }
 
+#content-container {
+    position: relative;
+    top: -76px;
+  }
