@@ -28,3 +28,75 @@ body {
     position: relative;
     top: -76px;
   }
+
+  .fa-envelope:before {
+    content: "\f0e0";
+}
+
+.btn-block i {
+    padding-right: 5px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+  @media screen and (min-width: 767px) {
+    .narrow-results {
+        display: block;
+    }
+}
+
+#content-container .row {
+    margin-bottom: 2em;
+}
+
+@media (min-width: 1200px) {
+    .ten-columns > .col-lg-2 {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ten-columns div {
+        margin-bottom: 10px !important;
+    }
+}
+
+#narrow-results .btn-block {
+    text-align: left !important;
+    padding-left: 5px !important;
+    font-size: 13px !important;
+    padding-top: 5px;
+    border-bottom: 5px solid rgba(255, 255, 255, .1) !important;
+}
+.btn {
+    outline: none !important;
+    border: none !important;
+}
+
+
+
+.btn-custom {
+    color: #fff;
+    background-color: #ffc107;
+}
+
+.badge {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ten-columns .badge {
+    float: right;
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 767px) {
+    .visible-xs {
+        margin-top: 15px !important;
+    }
+}

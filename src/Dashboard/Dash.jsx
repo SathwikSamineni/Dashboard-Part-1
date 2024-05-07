@@ -1,11 +1,11 @@
 import React from 'react';
-// import './Dash.css';
-import '../Part.css';
+import './Dash.css';
+import './Dashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TableGrid from '../TableGrid/TableGrid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDashboard } from '@fortawesome/free-solid-svg-icons';
+import { faDashboard , faCheckCircle, faEnvelope, faChartLine, faList, faChartColumn } from '@fortawesome/free-solid-svg-icons';
 import TablePager from '../TableGrid/TablePager';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
 const Dash = () => {
     return (
@@ -27,6 +27,7 @@ const Dash = () => {
 
             <div id="content-container">
                 <div className="content">
+                <div class ="col-md-12">
                 
 
             <div className="col-md-12 visible-xs">
@@ -34,23 +35,23 @@ const Dash = () => {
                     <div className="collapse show" id="collapseFilter" >
                         <div className="row ten-columns" style={{ marginTop: '15px' }}>
                             <div className="col-sm-2">
-                                <a href="https://stagingapp.blue222.com/fadmin/dashboard/fadraft"><button className="btn btn-custom btn-block text-left"><i className="fa fa-envelope"></i> Draft RFPs &nbsp;<span className="badge badge-pill badge-light">0</span></button></a>
+                                <a href="https://stagingapp.blue222.com/fadmin/dashboard/fadraft"><button className="btn btn-custom btn-block text-left"><FontAwesomeIcon icon={faEnvelope} style={{paddingRight : '5px'}}/> Draft RFPs &nbsp;<span className="badge badge-pill badge-light">0</span></button></a>
                             </div>
                             <div class="col-sm-2">
-                        <a href="https://stagingapp.blue222.com/faadmin/dashboard/fapending"><button class="btn btn-success btn-block"><i class="fa fa-check-circle"></i> Pending RFPs &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                        <a href="https://stagingapp.blue222.com/faadmin/dashboard/fapending"><button class="btn btn-success btn-block"><FontAwesomeIcon icon={faCheckCircle} /> Pending RFPs &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
                     </div>
                     <div class="col-sm-2">
-                        <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_progress"><button class="btn btn-info btn-block widget-active"><i class="fa fa-bar-chart"></i> Active Projects &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                        <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_progress"><button class="btn btn-info btn-block widget-active"><FontAwesomeIcon icon={faChartColumn} /> Active Projects &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
                     </div>
                     <div class="col-sm-2">
-                        <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_pendingReview"><button class="btn btn-spl btn-block"><i class="fa fa-line-chart"></i> Pending Review &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                        <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_pendingReview"><button class="btn btn-spl btn-block"><FontAwesomeIcon icon={faChartLine} /> Pending Review &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
                     </div>
                     <div class="col-sm-2">
-                        <a href="https://stagingapp.blue222.com/faadmin/dashboard/facomplete"><button class="btn btn-warning btn-block"><i class="fa fa-star-o"></i> Projects Completed &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                        <a href="https://stagingapp.blue222.com/faadmin/dashboard/facomplete"><button class="btn btn-warning btn-block"><FontAwesomeIcon icon={farStar} />  Projects Completed &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
                     </div>
 
                     <div class="col-sm-2">
-                        <a href="https://stagingapp.blue222.com/faadmin/dashboard/faall"><button class="btn btn-danger btn-block"><i class="fa fa-list"></i> All &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                        <a href="https://stagingapp.blue222.com/faadmin/dashboard/faall"><button class="btn btn-danger btn-block"><FontAwesomeIcon icon={faList} /> All &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
                     </div>
                         </div>
                     </div>
@@ -60,27 +61,26 @@ const Dash = () => {
             <div id="narrow-results" className="narrow-results collapse">
                 <div className="row ten-columns" style={{ paddingTop: '15px' }}>
                     <div className="col-sm-6 col-md-6 col-lg-2">
-                        <a href="https://stagingapp.blue222.com/fadmin/dashboard/fadraft"><button className="btn btn-custom btn-block text-left"><i className="fa fa-envelope"></i> Draft RFPs &nbsp;<span className="badge badge-pill badge-light">0</span></button></a>
+                        <a href="https://stagingapp.blue222.com/fadmin/dashboard/fadraft"><button className="btn btn-custom btn-block text-left"><FontAwesomeIcon icon={faEnvelope} style={{paddingRight : '5px'}}/> Draft RFPs &nbsp;<span className="badge badge-pill badge-light">0</span></button></a>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-2">
-                <a href="https://stagingapp.blue222.com/faadmin/dashboard/fapending"><button class="btn btn-success btn-block"><i class="fa fa-check-circle"></i> Pending RFPs &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                <a href="https://stagingapp.blue222.com/faadmin/dashboard/fapending"><button class="btn btn-success btn-block"><FontAwesomeIcon icon={faCheckCircle} /> Pending RFPs &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_progress"><button class="btn btn-info btn-block widget-active"><i class="fa fa-bar-chart"></i> Active Projects &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_progress"><button class="btn btn-info btn-block widget-active"><FontAwesomeIcon icon={faChartColumn} /> Active Projects &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_pendingReview"><button class="btn btn-spl btn-block"><i class="fa fa-line-chart"></i> Pending Review &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                <a href="https://stagingapp.blue222.com/fadmin/dashboard/fain_pendingReview"><button class="btn btn-spl btn-block"><FontAwesomeIcon icon={faChartLine} /> Pending Review &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <a href="https://stagingapp.blue222.com/faadmin/dashboard/facomplete"><button class="btn btn-warning btn-block"><i class="fa fa-star-o"></i> Projects Completed &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                <a href="https://stagingapp.blue222.com/faadmin/dashboard/facomplete"><button class="btn btn-warning btn-block"><FontAwesomeIcon icon={farStar} /> Projects Completed &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <a href="https://stagingapp.blue222.com/faadmin/dashboard/faall"><button class="btn btn-danger btn-block"><i class="fa fa-list"></i> All &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
+                <a href="https://stagingapp.blue222.com/faadmin/dashboard/faall"><button class="btn btn-danger btn-block"><FontAwesomeIcon icon={faList} /> All &nbsp;<span class="badge badge-pill badge-light">0</span></button></a>
             </div>
                 </div>
             </div>
 
-           {/* <TableGrid /> */}
            <div className="portlet">
       <table className="ui-table-reflow tablesorter table table-bordered hasFilters tablesorter-bootstrap" style={{ fontSize: '13px' }} role="grid">
         <colgroup></colgroup>
@@ -168,6 +168,7 @@ const Dash = () => {
       </table>
       <TablePager />
     </div>
+        </div>
         </div>
         </div>
             </div>

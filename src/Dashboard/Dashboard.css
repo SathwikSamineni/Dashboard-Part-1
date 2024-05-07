@@ -1,0 +1,361 @@
+.mini-box {
+  min-height: 120px;
+  padding: 10px;
+  background-color: #cfcfcf;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.panel {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.panel:hover {
+  background-color: #999;
+}
+
+.mini-box .box-icon {
+  display: block;
+  float: left;
+  margin: 15px 5px 5px 5px !important;
+  width: 50px;
+  height: 50px;
+  line-height: 70px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 35px;
+  border-radius: 50%;
+}
+
+.bg-draft {
+  background-color: #757373;
+  color: #fff;
+}
+
+.bg-pending {
+  background-color: #00aeef;
+  color: #fff;
+}
+
+.bg-inprogress {
+  background-color: #e77e23;
+  color: #fff;
+}
+
+.bg-complete {
+  background-color: #71aa00;
+  color: #fff;
+}
+
+.bg-all {
+  background-color: #ffb61c;
+  color: #fff;
+}
+
+.mini-box .box-info p {
+  margin: 6px;
+}
+
+.mini-box .box-icon.rounded {
+  border-radius: 50%;
+}
+
+.size-h2 {
+  font-size: 30px;
+}
+
+.filterable .panel-heading .pull-right {
+  margin-top: -20px;
+}
+
+.filterable .filters input[disabled] {
+  background-color: transparent;
+  border: none;
+  cursor: auto;
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+}
+
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+  color: #333;
+}
+
+.filterable .filters input[disabled]::-moz-placeholder {
+  color: #333;
+}
+
+.filterable .filters input[disabled]:-ms-input-placeholder {
+  color: #333;
+}
+
+.panel a:hover {
+  text-decoration: none;
+}
+
+.col-b222-3 {
+  width: 20%;
+}
+
+.mini-box {
+  margin-bottom: 20px;
+}
+
+/*For responsive*/
+@media screen and (max-width: 1024px) {
+  .dashboard-box {
+    width: 49% !important;
+    display: inline-block !important;
+  }
+  .mini-box .box-icon {
+    margin-left: -6px !important;
+    width: 30px;
+  }
+  .mini-box .box-info .box-info-label {
+    font-size: 12px !important;
+  }
+}
+
+/* REQUIRED CSS: change your reflow breakpoint here (35em below) */
+@media screen and (max-width: 1024px) {
+  .ui-table-reflow td,
+  .ui-table-reflow th {
+    box-sizing: border-box;
+    float: right;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .ui-table-reflow tbody td:before {
+    color: #469;
+    font-size: .9em;
+    content: '   ' attr(data-title);
+    float: left;
+    width: 50%;
+    white-space: pre-wrap;
+    text-align: bottom;
+    display: inline-block;
+    font-weight: bold;
+  }
+  .ui-table-reflow tbody .odd td {
+    background-color: #cfcfcf !important;
+  }
+  .ui-table-reflow tbody td:nth-child(1):before {
+    content: '+ ' attr(data-title) !important;
+  }
+  .ui-table-reflow tbody td:nth-child(1).minimize:before {
+    content: '-  ' attr(data-title) !important;
+  }
+  .ui-table-reflow tbody td:nth-child(n + 3) {
+    display: none;
+  }
+  .ui-table-reflow thead .tablesorter-headerRow {
+    display: none;
+  }
+  .ui-table-reflow thead .tablesorter-filter-row td:nth-child(n + 2) {
+    display: none;
+  }
+  .ui-table-reflow thead .tablesorter-filter-row td:nth-child(1):before {
+    content: '+ ' !important;
+  }
+  .ui-table-reflow thead .tablesorter-filter-row td:nth-child(1).minimize:before {
+    content: '- ' !important;
+  }
+  .ui-table-reflow tbody .new_project_invited_tr td {
+    background-color: #f4bfba !important;
+  }
+}
+
+/* Heart of the matter */
+@media (min-width: 768px) {
+  .ten-columns > .col-sm-2 {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ten-columns > .col-lg-2 {
+    width: 20%;
+  }
+}
+
+.text-truncate {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Rotating fa icon when expanding/collapsing */
+.collapse-chevron .fa {
+  transition: .3s transform ease-in-out;
+}
+
+.collapse-chevron .collapsed .fa {
+  transform: rotate(-90deg);
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 5px;
+  outline: none;
+}
+
+.col-sm-2 a,
+a:active,
+a:focus,
+a:hover {
+  outline: none !important;
+  border: none !important;
+  text-decoration: none;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-custom a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.open .dropdown-toggle.btn-custom {
+  color: #ffffff;
+  background-color: #eab106;
+  border-color: #eab106;
+}
+
+.btn {
+  outline: none !important;
+  border: none !important;
+}
+
+.progress {
+  background-color: #484848 !important;
+}
+
+.btn-spl {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-spl:hover {
+  color: #fff;
+  background-color: #1190a4;
+  border-color: #1190a4;
+  text-decoration: none;
+}
+
+#narrow-results .btn-block {
+  text-align: left !important;
+  padding-left: 5px !important;
+  font-size: 13px !important;
+  padding-top: 5px;
+  border-bottom: 5px solid rgba(255,
+
+ 255, 255, .1) !important;
+}
+
+#narrow-results .widget-active {
+  border-bottom: #124c70 5px solid !important;
+}
+
+.ten-columns .widget-active {
+  border-bottom: #124c70 5px solid !important;
+}
+
+.col-sm-2:nth-of-type(even) {
+  background: #fff;
+}
+
+@media screen and (min-width:767px) {
+  .narrow-results {
+    display: block;
+  }
+  .visible-xs {
+    margin-top: 15px !important;
+  }
+}
+
+@media screen and (max-width:766px) {
+  .narrow-results {
+    display: none
+  }
+}
+
+.custom-badge {
+  position: absolute !important;
+  top: -8px !important;
+  background: red;
+}
+
+.noti-badge {
+  background: red;
+}
+
+.ten-columns .badge {
+  float: right;
+  margin-right: 5px;
+}
+
+#dashboard-icon-toggle {
+  margin-top: -35px !important;
+}
+
+.btn-block i {
+  padding-right: 5px;
+}
+
+.ten-columns .col-sm-2 {
+  margin-bottom: 10px !important;
+}
+
+@media only screen and (min-width: 1200px) {
+    .ten-columns > .col-lg-2 {
+      width: 20% !important;
+    }
+  }
+  
+.ten-columns > .col-sm-4 {
+  padding-left: 10px !important;
+  padding-right: 8px !important;
+}
+
+@media all and (device-width: 823px) and (device-height: 411px) and (orientation:landscape) {
+  #narrow-results {
+    margin-top: 50px !important;
+  }
+  #content-container .row > div {
+    margin-bottom: 10px;
+  }
+  .col-sm-4:nth-child(4) {
+    /* width: 34%;*/
+  }
+}
+
+@media (max-width: 992px) {
+  .ten-columns div {
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ten-columns div {
+    margin-bottom: 10px !important;
+  }
+}
